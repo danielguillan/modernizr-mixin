@@ -1,0 +1,110 @@
+// =============================================================================
+// Modernizr mixin
+//
+// Table of contents:
+// 1. Modernizr mixin
+//   1.1 Generate placholder name and selectors
+//   1.2 Define placholder and print @content
+//   1.3 Define feature selector and extend the placeholder
+// 2. Aliases
+//   2.1 Yep alias
+//   2.2 Nope alias
+// 3. Demo
+//
+// Usage:
+// .my-selector {
+//   @include yep($features) { ... }
+//   @include nope($features) { ... {
+// }
+//
+// =============================================================================
+
+// =============================================================================
+// 1. Modernizr mixin
+// =============================================================================
+
+@mixin modernizr($features, $supports) {
+
+  $everything-okay: true;
+
+  // Use the 'no-' prefix if checking for unsuported features (e.g. `.no-translate3d`)
+  $prefix: if($supports, '', 'no-');
+
+  // Features selector
+  // a) create a string if checking for supported features. We'll concatenate class names later on (e.g. `.translate3d.opacity selector`)
+  // b) create a list if checking for unsuported features. We'll append the class names later on (e.g. `.no-js selector, .no-translate3d selector`)
+  $selector: if($supports, '', (unquote('.no-js')));
+
+  // The placeholder (e.g. `%yep-translate3d` or `%nope-opacity`)
+  $placeholder: if($supports, '%yep', '%nope');
+
+
+  // 1.1 Generate placeholder and selectors
+  // =====================================
+
+  @each $feature in $features {
+
+    // Making sure $feature is a string
+    @if type-of($feature) != string {
+
+      $everything-okay: false;
+      @warn '`#{$feature} is not a string for `modernizr`';
+
+    } @else {
+
+      // Add feature name to the placeholder string (e.g. '%yep' + '-' + 'translate3d' or '%nope' + '-' + 'translate3d')
+      $placeholder: $placeholder + '-' + $feature;
+
+      // Define the new selector string (e.g. `.translate3d` or `.no-translate3d`)
+      $new-selector: #{'.' + $prefix + $feature};
+
+      // Append the new selector
+      // a) to the string if yep (e.g. `.translate3d.opacity`)
+      // b) to the list if nope (e.g. `.no-translate3d, .no-opacity`)
+      $selector: if($supports, $selector + $new-selector, append($selector, $new-selector, comma));
+
+    }
+  }
+
+  @if $everything-okay == true {
+
+    // 1.2 Define the placholder and print @content
+    // =====================================
+
+    #{$placeholder} & {
+      @content;
+    }
+
+
+    // 1.3 Define feature selector(s) and extend the placeholder
+    // =====================================
+
+    @at-root #{$selector} {
+      @extend #{$placeholder};
+    }
+
+  }
+}
+
+// =============================================================================
+// 2. Aliases
+// =============================================================================
+
+  // 2.1 Yep alias
+  // =====================================
+
+  @mixin yep($features) {
+    @include modernizr($features, $supports: true) {
+      @content;
+    }
+  }
+
+
+  // 2.2 Nope alias
+  // =====================================
+
+  @mixin nope($features) {
+    @include modernizr($features, $supports: false) {
+      @content;
+    }
+  }
