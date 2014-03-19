@@ -1,0 +1,5 @@
+{
+  "name": "modernizr-mixin",
+  "description": "Simple and comprehensive mixin for Modernizr tests in Sass ",
+  "tags": ["modernizr", "mixin", "helper", "browser", "features"]
+}
