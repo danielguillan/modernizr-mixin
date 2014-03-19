@@ -1,0 +1,10 @@
+{
+    "name": "modernizr-mixin",
+    "version": "1.0.0",
+    "main": "modernizr.scss",
+    "author": "Daniel Guillan",
+    "ignore": [
+        ".gitignore",
+        "package.json"
+    ]
+}
