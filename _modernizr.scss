@@ -93,7 +93,7 @@
   // 2.1 Yep alias
   // =====================================
 
-  @mixin yep($features) {
+  @mixin yep($features...) {
     @include modernizr($features, $supports: true) {
       @content;
     }
@@ -103,7 +103,7 @@
   // 2.2 Nope alias
   // =====================================
 
-  @mixin nope($features) {
+  @mixin nope($features...) {
     @include modernizr($features, $supports: false) {
       @content;
     }
