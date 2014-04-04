@@ -3,7 +3,5 @@
     "version": "2.0.0",
     "main": "modernizr.scss",
     "author": "Daniel Guillan",
-    "ignore": [
-        "**/.*"
-    ]
+    "ignore": ["*","!_modernizr.scss"]
 }
