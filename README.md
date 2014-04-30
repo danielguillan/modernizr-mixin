@@ -14,6 +14,8 @@ You can optionally install the package using Bower. Simply run the following com
 
 ### Usage
 
+Requires Sass 3.3.
+
 The Modernizr helper includes two mixins: `yep` and `nope`. Simply pass a comma-separeted list (`argList`) of features as argument and the rules you need to print.
 
 #### yep
