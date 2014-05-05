@@ -4,13 +4,13 @@ A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
 
 ## Installation
 
-Download `_modernizr.scss` and place it in your Sass directory. Thenand import it into your main stylesheet:
+Download `_modernizr.scss` and place it in your Sass directory. Then import it into your main stylesheet:
 
 	@import 'modernizr';
 
 ### Install with bower
 
-You can alternatively install the package using Bower. Simply run the following comand:
+Alternatively, install the package using Bower. Simply run the following comand:
 
 	bower install --save-dev modernizr-mixin
 
@@ -53,18 +53,18 @@ CSS output:
 
 ```css
 .translate3d.opacity .my-selector {
-		transform: translate3d(0, 100px, 0);
-		opacity: 0;
+	transform: translate3d(0, 100px, 0);
+	opacity: 0;
 }
 
 .no-js my-selector,
 .no-translate3d .selector,
 .no-opacity .selector {
-		top: 100px;
-		display: none;
+	top: 100px;
+	display: none;
 }
 ```
 
-## Thanks
+## Acknowledgements
 
 Thanks to [Hugo Giraudel](https://github.com/hugogiraudel) for reviewing and tweaking the original code.
