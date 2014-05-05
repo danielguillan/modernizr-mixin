@@ -2,13 +2,17 @@
 
 A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
 
-## Installation
 
-Download `_modernizr.scss` and place it in your Sass directory. Then import it into your main stylesheet:
+## Install
 
-	@import 'modernizr';
+Requires Sass 3.3
 
-### Install with bower
+### Download
+
+Download `_modernizr.scss` and place it in your Sass directory.
+
+
+### Bower
 
 Alternatively, install the package using Bower. Simply run the following comand:
 
@@ -16,7 +20,9 @@ Alternatively, install the package using Bower. Simply run the following comand:
 
 ## Usage
 
-Requires Sass 3.3.
+First import it into your main stylesheet:
+
+	@import 'modernizr';
 
 The Modernizr helper includes two mixins: `yep` and `nope`. Simply pass a comma-separeted list (`argList`) of features as argument and the rules you need to print.
 
