@@ -15,7 +15,7 @@ Download `_modernizr.scss` which is located in the `stylesheets` folder and plac
 
 ### Bower
 
-Alternatively, install the package using Bower. Simply run the following comand:
+To install the package using Bower simply run the following command:
 
 	bower install --save-dev modernizr-mixin
 
@@ -23,7 +23,7 @@ Alternatively, install the package using Bower. Simply run the following comand:
 
 Modernizr is also available as a Compass extension:
 
-	`gem install modernizr-mixin`
+	gem install modernizr-mixin
 
 Then add the following line to your `config.rb`:
 
