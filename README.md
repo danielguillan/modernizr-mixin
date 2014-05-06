@@ -21,7 +21,7 @@ To install the package using Bower simply run the following command:
 
 ### Compass extension
 
-Modernizr is also available as a Compass extension:
+The Modernizr mixin is also available as a Compass extension:
 
 	gem install modernizr-mixin
 
