@@ -22,7 +22,7 @@
 // 1. Modernizr mixin
 // =============================================================================
 
-@mixin modernizr($features, $supports) {
+@mixin modernizr($supports, $features...) {
 
   $everything-okay: true;
 
@@ -93,7 +93,7 @@
   // =====================================
 
   @mixin yep($features...) {
-    @include modernizr($features, $supports: true) {
+    @include modernizr(true, $features...) {
       @content;
     }
   }
@@ -103,7 +103,7 @@
   // =====================================
 
   @mixin nope($features...) {
-    @include modernizr($features, $supports: false) {
+    @include modernizr(false, $features...) {
       @content;
     }
   }
