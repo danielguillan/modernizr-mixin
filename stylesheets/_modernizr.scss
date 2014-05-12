@@ -32,7 +32,7 @@
   // Features selector
   // a) create a string if checking for supported features. We'll concatenate class names later on (e.g. `.translate3d.opacity selector`)
   // b) create a list if checking for unsuported features. We'll append the class names later on (e.g. `.no-js selector, .no-translate3d selector`)
-  $selector: if($supports, '', (unquote('.no-js')));
+  $selector: if($supports, '', unquote('.no-js'));
 
   // The placeholder (e.g. `%yep-translate3d` or `%nope-opacity`)
   $placeholder: if($supports, '%yep', '%nope');
