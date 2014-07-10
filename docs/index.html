@@ -89,7 +89,7 @@
           
           <li>
             <a href="#mixin-modernizr">modernizr</a> 
-            
+            <span class="sidebar__annotation  sidebar__annotation--private">private</span>
             
           </li>
 
@@ -152,6 +152,8 @@
             <section class="main__item  item" id="mixin-modernizr">
               <h2 class="item__heading">
   
+    <span class="item__access">[private]</span>
+  
 
   <a class="item__name" href="#mixin-modernizr">modernizr</a>
 
@@ -166,7 +168,29 @@
 
 
 
-<pre class="item__code"><code class="language-scss">@mixin modernizr () { ... }</code></pre>
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin modernizr ($supports, $features...) { ... }</code></pre>
 
 
 
@@ -175,14 +199,56 @@
   
   <h3 class="item__sub-heading">Description</h3>
   
-  <div class="item__description"><p>// <em> Prints classes for supported or unsupported features<br>// </em> ---<br>// <em> @access private<br>// </em> ---<br>// <em> @param {Bool}      $supports   - Whether to check for supported features or not<br>// </em> @param {ArgList}   $features   - List of features<br>// <em> ---<br>// </em> @throws <code>$feature</code> is not a <code>string</code> for <code>modernizr</code><br>//</p></div>
+  <div class="item__description"><p>Prints classes for supported or unsupported features</p></div>
 
 
   <h3 class="item__sub-heading">Parameters</h3>
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <td data-label="name"><code>$supports</code></td>
+          <td data-label="desc"><p>Whether to check for supported features or not</p></td>
+          <td data-label="type">
+          
+            Bool
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <td data-label="name"><code>$features</code></td>
+          <td data-label="desc"><p>List of features</p></td>
+          <td data-label="type">
+          
+            Arglist
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
@@ -191,6 +257,14 @@
   
 
   
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p><code>$feature</code> is not a <code>string</code> for <code>modernizr</code></p></li>
+    
+  </ul>
+
 
   
 
@@ -243,7 +317,19 @@
 
 
 
-<pre class="item__code"><code class="language-scss">@mixin yep () { ... }</code></pre>
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin yep ($features...) { ... }</code></pre>
 
 
 
@@ -252,20 +338,53 @@
   
   <h3 class="item__sub-heading">Description</h3>
   
-  <div class="item__description"><p>// <em> Prints classes for supported features<br>// </em> ---<br>// <em> @requires modernizr<br>// </em> ---<br>// <em> @access public<br>// </em> ---<br>// <em> @param {ArgList} $features   - List of features<br>// </em> ---<br>// <em> @example scss<br>// </em> .my-selector { @include yep(opacity, csstransforms) { // ... } }<br>//</p></div>
+  <div class="item__description"><p>Prints classes for supported features</p></div>
 
 
   <h3 class="item__sub-heading">Parameters</h3>
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <td data-label="name"><code>$features</code></td>
+          <td data-label="desc"><p>List of features</p></td>
+          <td data-label="type">
+          
+            Arglist
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
   
 
   
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.my-selector { @include yep(opacity, csstransforms) { // ... } }</code></pre>
+  
+
 
   
 
@@ -320,7 +439,19 @@
 
 
 
-<pre class="item__code"><code class="language-scss">@mixin nope () { ... }</code></pre>
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin nope ($features...) { ... }</code></pre>
 
 
 
@@ -329,20 +460,53 @@
   
   <h3 class="item__sub-heading">Description</h3>
   
-  <div class="item__description"><p>// <em> Nope “alias”<br>// </em> Prints classes for unsupported features and lack of JS<br>// <em> ---<br>// </em> @requires modernizr<br>// <em> ---<br>// </em> @access public<br>// <em> ---<br>// </em> @param {ArgList} $features - List of features<br>// <em> ---<br>// </em> @example scss<br>// * .my-selector { @include nope(opacity, csstransforms) { // ... } }<br>//</p></div>
+  <div class="item__description"><p>Nope “alias”<br>Prints classes for unsupported features and lack of JS</p></div>
 
 
   <h3 class="item__sub-heading">Parameters</h3>
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <td data-label="name"><code>$features</code></td>
+          <td data-label="desc"><p>List of features</p></td>
+          <td data-label="type">
+          
+            Arglist
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
   
 
   
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.my-selector { @include nope(opacity, csstransforms) { // ... } }</code></pre>
+  
+
 
   
 
