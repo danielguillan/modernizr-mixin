@@ -1,0 +1,8 @@
+@import '../../stylesheets/_modernizr';
+
+.modernizr-single-supports {
+    @include modernizr(true, opacity) {
+        test: ok;
+    }
+}
+

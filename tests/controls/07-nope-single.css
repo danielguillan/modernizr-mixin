@@ -34,34 +34,6 @@
 * @example scss
 * .my-selector { @include nope(opacity, csstransforms) { // ... } }
 */
-.opacity .modernizr-single-supports {
-  test: ok;
-}
-
-.opacity.csstransforms .modernizr-multi-supports {
-  test: ok;
-}
-
-.no-js .modernizr-single-supports-false, .no-opacity .modernizr-single-supports-false {
-  test: ok;
-}
-
-.no-js .modernizr-multi-supports-false, .no-opacity .modernizr-multi-supports-false, .no-csstransforms .modernizr-multi-supports-false {
-  test: ok;
-}
-
-.opacity .yep-single {
-  test: ok;
-}
-
-.opacity.csstransforms .yep-multi {
-  test: ok;
-}
-
 .no-js .nope-single, .no-opacity .nope-single {
-  test: ok;
-}
-
-.no-js .nope-multi, .no-opacity .nope-multi, .no-csstransforms .nope-multi {
   test: ok;
 }

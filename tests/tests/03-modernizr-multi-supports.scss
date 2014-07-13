@@ -1,0 +1,8 @@
+@import '../../stylesheets/_modernizr';
+
+.modernizr-multi-supports {
+    $features: (opacity, csstransforms);
+    @include modernizr(true, $features...) {
+        test: ok;
+    }
+}
