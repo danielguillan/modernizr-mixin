@@ -1,0 +1,7 @@
+@import '../../stylesheets/_modernizr';
+
+.yep-multi {
+    @include yep(opacity, csstransforms) {
+        test: ok;
+    }
+}

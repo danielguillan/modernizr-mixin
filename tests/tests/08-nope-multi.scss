@@ -1,0 +1,7 @@
+@import '../../stylesheets/_modernizr';
+
+.nope-multi {
+    @include nope(opacity, csstransforms) {
+        test: ok;
+    }
+}

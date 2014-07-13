@@ -1,0 +1,7 @@
+@import '../../stylesheets/_modernizr';
+
+.nope-single {
+    @include nope(opacity) {
+        test: ok;
+    }
+}

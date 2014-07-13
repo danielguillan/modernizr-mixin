@@ -1,0 +1,7 @@
+@import '../../stylesheets/_modernizr';
+
+.yep-single {
+    @include yep(opacity) {
+        test: ok;
+    }
+}
