@@ -12,23 +12,18 @@ There are 3 ways of installing the Modernizr mixin:
 
 ### Download
 
-Download `_modernizr.scss` which is located in the `stylesheets` folder and place it in your Sass directory.
+Download [_modernizr.scss](/stylesheets/_modernizr.scss) and place it in your Sass directory.
 
 ### Bower
 
-To install the package using Bower simply run the following command:
+Run the following command:
 
 	bower install --save-dev modernizr-mixin
 
 ### Compass extension
 
-The Modernizr mixin is also available as a Compass extension:
-
-	gem install modernizr-mixin
-
-Then add the following line to your `config.rb`:
-
-	require 'modernizr-mixin'
+1. `gem install modernizr-mixin`
+2. Add `require 'modernizr-mixin'` to your `config.rb`
 
 ## Usage
 
@@ -83,6 +78,6 @@ CSS output:
 }
 ```
 
-## Acknowledgements
+## Credits
 
-Thanks to [Hugo Giraudel](https://github.com/hugogiraudel) for reviewing and tweaking the original code.
+Thanks [Hugo Giraudel](https://github.com/hugogiraudel) for the code review and tweaks.
