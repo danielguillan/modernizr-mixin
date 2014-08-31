@@ -37,3 +37,11 @@
 .opacity.csstransforms .modernizr-multi-supports {
   test: ok;
 }
+
+.opacity.csstransforms .modernizr-multi-supports .modernizr-multi-supports2 {
+  test: ok;
+}
+
+.opacity.csstransforms .modernizr-multi-supports, .opacity.csstransforms .modernizr-multi-supports2 {
+  test: ok;
+}

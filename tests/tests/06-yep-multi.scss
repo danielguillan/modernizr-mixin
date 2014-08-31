@@ -1,6 +1,24 @@
 @import '../../stylesheets/_modernizr';
 
+// Simple
 .yep-multi {
+    @include yep(opacity, csstransforms) {
+        test: ok;
+    }
+}
+
+// Nested
+.yep-multi {
+    .yep-multi2 {
+        @include yep(opacity, csstransforms) {
+            test: ok;
+        }
+    }
+}
+
+// Multiple
+.yep-multi,
+.yep-multi2 {
     @include yep(opacity, csstransforms) {
         test: ok;
     }

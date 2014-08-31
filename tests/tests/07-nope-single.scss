@@ -1,6 +1,24 @@
 @import '../../stylesheets/_modernizr';
 
+// Simple
 .nope-single {
+    @include nope(opacity) {
+        test: ok;
+    }
+}
+
+// Nested
+.nope-single {
+    .nope-single2 {
+        @include nope(opacity) {
+            test: ok;
+        }
+    }
+}
+
+// Multiple
+.nope-single,
+.nope-single2 {
     @include nope(opacity) {
         test: ok;
     }

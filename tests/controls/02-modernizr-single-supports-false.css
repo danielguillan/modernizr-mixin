@@ -37,3 +37,11 @@
 .no-js .modernizr-single-supports-false, .no-opacity .modernizr-single-supports-false {
   test: ok;
 }
+
+.no-js .modernizr-single-supports-false .modernizr-single-supports-false2, .no-opacity .modernizr-single-supports-false .modernizr-single-supports-false2 {
+  test: ok;
+}
+
+.no-js .modernizr-single-supports-false, .no-js .modernizr-single-supports-false2, .no-opacity .modernizr-single-supports-false, .no-opacity .modernizr-single-supports-false2 {
+  test: ok;
+}

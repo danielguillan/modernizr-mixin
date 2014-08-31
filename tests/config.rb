@@ -18,5 +18,8 @@ output_style          = :expanded
 # or absolute paths
 relative_assets       = true
 
+# Disabling source maps
+sourcemap             = false
+
 # Learn more:
 #   http://compass-style.org/docs/tutorials/configuration-reference/

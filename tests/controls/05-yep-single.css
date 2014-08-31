@@ -37,3 +37,11 @@
 .opacity .yep-single {
   test: ok;
 }
+
+.opacity .yep-single .yep-single2 {
+  test: ok;
+}
+
+.opacity .yep-single, .opacity .yep-single2 {
+  test: ok;
+}

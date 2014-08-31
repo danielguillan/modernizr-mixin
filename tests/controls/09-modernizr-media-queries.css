@@ -34,14 +34,17 @@
 * @example scss
 * .my-selector { @include nope(opacity, csstransforms) { // ... } }
 */
-.no-js .nope-multi, .no-opacity .nope-multi, .no-csstransforms .nope-multi {
+.opacity .modernizr-single-supports {
   test: ok;
 }
 
-.no-js .nope-multi .nope-multi2, .no-opacity .nope-multi .nope-multi2, .no-csstransforms .nope-multi .nope-multi2 {
-  test: ok;
+@media screen and (min-width: 600px) {
+  .opacity .modernizr-single-supports {
+    test: ok;
+  }
 }
-
-.no-js .nope-multi, .no-js .nope-multi2, .no-opacity .nope-multi, .no-opacity .nope-multi2, .no-csstransforms .nope-multi, .no-csstransforms .nope-multi2 {
-  test: ok;
+@media screen and (min-width: 800px) {
+  .opacity .modernizr-single-supports {
+    test: ok;
+  }
 }
