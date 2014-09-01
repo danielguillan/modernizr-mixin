@@ -29,7 +29,7 @@
 
   // Make sure the mixin has been called within a selector
   @if not & {
-    @error 'Modernizr mixin should be called  within selector.';
+    @error 'Modernizr mixin should be called within a selector.';
   }
 
   // Generate placeholder and selectors
@@ -53,6 +53,7 @@
     }
   }
 
+  // Generate selector nesting features classes and the parent selector
   $selector: selector-nest($selector, &);
 
   // Define feature selector(s) and print @content
