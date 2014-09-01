@@ -3,4 +3,4 @@ rvm:
   - "2.0.0"
 before_install:
   - "gem install sass"
-  - "gem install compass --pre"
+  - "gem install compass"

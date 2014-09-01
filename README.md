@@ -6,7 +6,7 @@ A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
 
 ## Install
 
-Requires Sass 3.3
+Requires Sass 3.4
 
 There are 3 ways of installing the Modernizr mixin:
 

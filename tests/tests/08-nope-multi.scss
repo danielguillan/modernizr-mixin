@@ -1,6 +1,24 @@
 @import '../../stylesheets/_modernizr';
 
+// Simple
 .nope-multi {
+    @include nope(opacity, csstransforms) {
+        test: ok;
+    }
+}
+
+// Nested
+.nope-multi {
+    .nope-multi2 {
+        @include nope(opacity, csstransforms) {
+            test: ok;
+        }
+    }
+}
+
+// Multiple
+.nope-multi,
+.nope-multi2 {
     @include nope(opacity, csstransforms) {
         test: ok;
     }

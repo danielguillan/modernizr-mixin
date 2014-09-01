@@ -37,3 +37,11 @@
 .opacity.csstransforms .yep-multi {
   test: ok;
 }
+
+.opacity.csstransforms .yep-multi .yep-multi2 {
+  test: ok;
+}
+
+.opacity.csstransforms .yep-multi, .opacity.csstransforms .yep-multi2 {
+  test: ok;
+}

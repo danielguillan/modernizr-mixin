@@ -1,28 +1,26 @@
 @import '../../stylesheets/_modernizr';
 
-// Simple
+// No media query
 .modernizr-single-supports {
     @include modernizr(true, opacity) {
         test: ok;
     }
 }
 
-// Nested
-.modernizr-single-supports {
-    .modernizr-single-supports2 {
+// Inside
+@media screen and (min-width: 600px) {
+    .modernizr-single-supports {
         @include modernizr(true, opacity) {
             test: ok;
         }
     }
 }
 
-// Multiple
-.modernizr-single-supports,
-.modernizr-single-supports2 {
+// Outside
+.modernizr-single-supports {
     @include modernizr(true, opacity) {
-        test: ok;
+        @media screen and (min-width: 800px) {
+            test: ok;
+        }
     }
 }
-
-
-

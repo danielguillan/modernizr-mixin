@@ -19,8 +19,6 @@
 
 @mixin modernizr($supports, $features...) {
 
-  $everything-okay: true;
-
   // Use the 'no-' prefix if checking for unsuported features (e.g. `.no-translate3d`)
   $prefix: if($supports, '', 'no-');
 
@@ -29,9 +27,10 @@
   // b) create a list if checking for unsuported features. We'll append the class names later on (e.g. `.no-js selector, .no-translate3d selector`)
   $selector: if($supports, '', unquote('.no-js'));
 
-  // The placeholder (e.g. `%yep-translate3d` or `%nope-opacity`)
-  $placeholder: if($supports, '%yep', '%nope');
-
+  // Make sure the mixin has been called within a selector
+  @if not & {
+    @error 'Modernizr mixin should be called within a selector.';
+  }
 
   // Generate placeholder and selectors
   @each $feature in $features {
@@ -39,13 +38,9 @@
     // Making sure $feature is a string
     @if type-of($feature) != string {
 
-      $everything-okay: false;
-      @warn '`#{$feature} is not a string for `modernizr`';
+      @error '`#{$feature} is not a string for `modernizr`';
 
     } @else {
-
-      // Add feature name to the placeholder string (e.g. '%yep' + '-' + 'translate3d' or '%nope' + '-' + 'translate3d')
-      $placeholder: $placeholder + '-' + $feature;
 
       // Define the new selector string (e.g. `.translate3d` or `.no-translate3d`)
       $new-selector: #{'.' + $prefix + $feature};
@@ -58,20 +53,14 @@
     }
   }
 
-  @if $everything-okay == true {
+  // Generate selector nesting features classes and the parent selector
+  $selector: selector-nest($selector, &);
 
-    // Define the placholder and print @content
-    #{$placeholder} & {
+  // Define feature selector(s) and print @content
+    @at-root #{$selector} {
       @content;
     }
 
-
-    // Define feature selector(s) and extend the placeholder
-    @at-root #{$selector} {
-      @extend #{$placeholder};
-    }
-
-  }
 }
 
 

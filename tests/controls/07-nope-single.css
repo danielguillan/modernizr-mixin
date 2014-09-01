@@ -37,3 +37,11 @@
 .no-js .nope-single, .no-opacity .nope-single {
   test: ok;
 }
+
+.no-js .nope-single .nope-single2, .no-opacity .nope-single .nope-single2 {
+  test: ok;
+}
+
+.no-js .nope-single, .no-js .nope-single2, .no-opacity .nope-single, .no-opacity .nope-single2 {
+  test: ok;
+}
