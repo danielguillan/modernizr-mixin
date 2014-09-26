@@ -3,29 +3,6 @@
 
 
 
-
-
-
-
-
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-
-
 <html lang="en">
 <head>
   
@@ -33,124 +10,133 @@
 
 <title>SassDoc</title>
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
 <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
 
 <!-- Thanks to Sass-lang.com for the icons -->
-<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-144x144-precomposed-e674ce95.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-114x114-precomposed-19f81edf.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-72x72-precomposed-363e5ff9.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-57x57-precomposed-f3752e86.png" rel="apple-touch-icon-precomposed">
-<link href="http://sass-lang.com/assets/img/ico/favicon-0ccd2d9d.png" rel="shortcut icon">
+<link href="http://sass-lang.com/favicon.ico" rel="shortcut icon">
 
 </head>
 <body>
 
   
-  <header class="header" role="banner">
-  <div class="container">
-    <h1 class="header__title">
-      
-        SassDoc
-      
-    </h1>
-    <p class="header__item-count">3 items documented</p>
-  </div>
-</header>
-
-  
-  <div class="container">
-
+  <aside class="sidebar" role="nav">
     
-    <aside class="sidebar" role="nav">
-      
-  <h2 class="sidebar__heading">Documentation map</h2>
+  <div class="sidebar__header">
+  <h1 class="sidebar__title">
+    
+      SassDoc
+    
+  </h1>
+</div>
 
 <div class="sidebar__body">
-  <ul class="list-unstyled">
   
   
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
 
     
     
+      <p class="sidebar__item  sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p>
 
       
       
+        <div>
 
-      
-      
-
-        <li class="sidebar__sub-heading"><a href="#mixin">Mixins</a></li>
-          
         
         
 
-          
-          <li>
-            <a href="#mixin-modernizr">modernizr</a> 
-            <span class="sidebar__annotation  sidebar__annotation--private">private</span>
-            
-          </li>
-
         
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p>
 
           
-          <li>
-            <a href="#mixin-yep">yep</a> 
-            
-            
-          </li>
-
-        
-
           
-          <li>
-            <a href="#mixin-nope">nope</a> 
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="modernizr" data-type="mixin">
+              <a href="#mixin-modernizr">modernizr
+              <span class="sidebar__annotation  sidebar__annotation--private">private</span>
+              
+              </a>
+            </li>
             
+          
             
-          </li>
-
+            <li class="sidebar__item  sassdoc__item" data-name="yep" data-type="mixin">
+              <a href="#mixin-yep">yep
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="nope" data-type="mixin">
+              <a href="#mixin-nope">nope
+              
+              
+              </a>
+            </li>
+            </ul>
+          
         
-
+        </div>
       
 
     
-
   
-  </ul>
 </div>
 
 
+  </aside>
 
-    </aside>
+  
+  <article class="main" role="main">
 
     
-    <article class="main" role="main">
-      
+    <header class="header" role="banner">
+  <div class="container">
+  
+
+    <div class="sassdoc__searchbar  searchbar">
+       <label for="js-search-input" class="visually-hidden">Search</label>
+       <div class="searchbar__form" id="js-search">
+         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+       </div>
+     </div>
+  </div>
+</header>
+
+
+    <div class="container">
+    
 
   
   
 
     
     
+      <section class="main__section">
+        <h1 class="main__heading" id="undefined">General</h1>
 
-      
-      
-
-      
-      
-        <section class="main__section">
-          <h1 class="main__heading" id="mixin">Mixins</h1>
+        
+        
 
           
           
 
-            
-            
-            
-            <section class="main__item  item" id="mixin-modernizr">
-              <h2 class="item__heading">
+          
+          
+            <section class="main__sub-section" id="undefined-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-modernizr">
+
+<h3 class="item__heading">
   
     <span class="item__access">[private]</span>
   
@@ -160,9 +146,13 @@
   
 
   
+</h3>
 
-  
-</h2>
+
+
+
+
+
 
 
 
@@ -190,36 +180,95 @@
     
   
 
-<pre class="item__code"><code class="language-scss">@mixin modernizr ($supports, $features...) { ... }</code></pre>
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin modernizr($supports, $features...) { 
+
+  // Use the &#39;no-&#39; prefix if checking for unsuported features (e.g. `.no-translate3d`)
+  $prefix: if($supports, &#39;&#39;, &#39;no-&#39;);
+
+  // Features selector
+  // a) create a string if checking for supported features. We&#39;ll concatenate class names later on (e.g. `.translate3d.opacity selector`)
+  // b) create a list if checking for unsuported features. We&#39;ll append the class names later on (e.g. `.no-js selector, .no-translate3d selector`)
+  $selector: if($supports, &#39;&#39;, unquote(&#39;.no-js&#39;));
+
+  // Make sure the mixin has been called within a selector
+  @if not &amp; {
+    @error &#39;Modernizr mixin should be called within a selector.&#39;;
+  }
+
+  // Generate placeholder and selectors
+  @each $feature in $features {
+
+    // Making sure $feature is a string
+    @if type-of($feature) != string {
+
+      @error &#39;`#{$feature} is not a string for `modernizr`&#39;;
+
+    } @else {
+
+      // Define the new selector string (e.g. `.translate3d` or `.no-translate3d`)
+      $new-selector: #{&#39;.&#39; + $prefix + $feature};
+
+      // Append the new selector
+      // a) to the string if yep (e.g. `.translate3d.opacity`)
+      // b) to the list if nope (e.g. `.no-translate3d, .no-opacity`)
+      $selector: if($supports, $selector + $new-selector, append($selector, $new-selector, comma));
+
+    }
+  }
+
+  // Generate selector nesting features classes and the parent selector
+  $selector: selector-nest($selector, &amp;);
+
+  // Define feature selector(s) and print @content
+    @at-root #{$selector} {
+      @content;
+    }
+
+ }"
+    data-collapsed="@mixin modernizr($supports, $features...) { ... }"><code>@mixin modernizr($supports, $features...) { ... }</code></pre>
+
+  
+</div>
+
+
+
 
 
 
   
-  
-  
+    
+    
   <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Prints classes for supported or unsupported features</p>
+</div>
+
+
   
-  <div class="item__description"><p>Prints classes for supported or unsupported features</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
+    
+    <h3 class="item__sub-heading">Parameters</h3>
 
 
 
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$supports</code></td>
-          <td data-label="desc"><p>Whether to check for supported features or not</p></td>
+          <th scope="row" data-label="name"><code>$supports</code></th>
+          <td data-label="desc"><p>Whether to check for supported features or not</p>
+</td>
           <td data-label="type">
           
             Bool
@@ -227,14 +276,15 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$features</code></td>
-          <td data-label="desc"><p>List of features</p></td>
+          <th scope="row" data-label="name"><code>$features</code></th>
+          <td data-label="desc"><p>List of features</p>
+</td>
           <td data-label="type">
           
             Arglist
@@ -242,7 +292,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -253,55 +303,72 @@
 
 
   
+    
+    
 
   
+    
+    
 
   
+    
+    
   <h3 class="item__sub-heading">Throws</h3>
 
   <ul class="list-unstyled">
     
-      <li><p><code>$feature</code> is not a <code>string</code> for <code>modernizr</code></p></li>
+      <li><p><code>$feature</code> is not a <code>string</code> for <code>modernizr</code></p>
+</li>
     
   </ul>
 
 
   
+    
+    
+
+
+
+
+  
+    
+    
 
 
 
 
 
   
+    
+    
+
+  
+    
+    
 
 
 
 
+  
+    
+    
 
-
-  	
+  
+    
+    
+  
+    
+    
 
   
 
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>stylesheets//_modernizr.scss</code></p>
 
 
+</section>
+              
+                <section class="main__item  item" id="mixin-yep">
 
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-yep">
-              <h2 class="item__heading">
+<h3 class="item__heading">
   
 
   <a class="item__name" href="#mixin-yep">yep</a>
@@ -309,9 +376,13 @@
   
 
   
+</h3>
 
-  
-</h2>
+
+
+
+
+
 
 
 
@@ -329,36 +400,55 @@
     
   
 
-<pre class="item__code"><code class="language-scss">@mixin yep ($features...) { ... }</code></pre>
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin yep($features...) { 
+  @include modernizr(true, $features...) {
+    @content;
+  }
+ }"
+    data-collapsed="@mixin yep($features...) { ... }"><code>@mixin yep($features...) { ... }</code></pre>
+
+  
+</div>
+
+
+
 
 
 
   
-  
-  
+    
+    
   <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Prints classes for supported features</p>
+</div>
+
+
   
-  <div class="item__description"><p>Prints classes for supported features</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
+    
+    <h3 class="item__sub-heading">Parameters</h3>
 
 
 
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$features</code></td>
-          <td data-label="desc"><p>List of features</p></td>
+          <th scope="row" data-label="name"><code>$features</code></th>
+          <td data-label="desc"><p>List of features</p>
+</td>
           <td data-label="type">
           
             Arglist
@@ -366,7 +456,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -377,16 +467,34 @@
 
 
   
+    
+    
 
   
+    
+    
   <h3 class="item__sub-heading">Example</h3>
 
   
-    <pre class="item__example"><code class="language-scss">.my-selector { @include yep(opacity, csstransforms) { // ... } }</code></pre>
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">.my-selector {
+  @include yep(opacity, csstransforms) {
+    // ...
+  }
+}</code></pre>
+  </div>
   
 
 
   
+    
+    
+
+  
+    
+    
+
 
   
 
@@ -395,35 +503,44 @@
 
 
   
+    
+    
 
 
 
 
 
+  
+    
+    
 
-  	
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
 
   
 
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>stylesheets//_modernizr.scss</code></p>
 
 
+</section>
+              
+                <section class="main__item  item" id="mixin-nope">
 
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-nope">
-              <h2 class="item__heading">
+<h3 class="item__heading">
   
 
   <a class="item__name" href="#mixin-nope">nope</a>
@@ -431,9 +548,13 @@
   
 
   
+</h3>
 
-  
-</h2>
+
+
+
+
+
 
 
 
@@ -451,36 +572,56 @@
     
   
 
-<pre class="item__code"><code class="language-scss">@mixin nope ($features...) { ... }</code></pre>
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin nope($features...) { 
+  @include modernizr(false, $features...) {
+    @content;
+  }
+ }"
+    data-collapsed="@mixin nope($features...) { ... }"><code>@mixin nope($features...) { ... }</code></pre>
+
+  
+</div>
+
+
+
 
 
 
   
-  
-  
+    
+    
   <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Nope “alias”
+Prints classes for unsupported features and lack of JS</p>
+</div>
+
+
   
-  <div class="item__description"><p>Nope “alias”<br>Prints classes for unsupported features and lack of JS</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
+    
+    <h3 class="item__sub-heading">Parameters</h3>
 
 
 
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$features</code></td>
-          <td data-label="desc"><p>List of features</p></td>
+          <th scope="row" data-label="name"><code>$features</code></th>
+          <td data-label="desc"><p>List of features</p>
+</td>
           <td data-label="type">
           
             Arglist
@@ -488,7 +629,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -499,16 +640,34 @@
 
 
   
+    
+    
 
   
+    
+    
   <h3 class="item__sub-heading">Example</h3>
 
   
-    <pre class="item__example"><code class="language-scss">.my-selector { @include nope(opacity, csstransforms) { // ... } }</code></pre>
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">.my-selector {
+  @include nope(opacity, csstransforms) {
+    // ...
+  }
+}</code></pre>
+  </div>
   
 
 
   
+    
+    
+
+  
+    
+    
+
 
   
 
@@ -517,44 +676,55 @@
 
 
   
+    
+    
 
 
 
 
-
-
-  	
 
   
+    
+    
 
   
+    
+    
+
+
+
 
   
-  <h3 class="item__sub-heading">Found at</h3>
+    
+    
 
-  <p><code>stylesheets//_modernizr.scss</code></p>
-
-
-
-
-            </section>
-
-          
-        </section>
-
-      
-
+  
+    
+    
+  
+    
     
 
   
 
 
-    </article>
 
-  </div>
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
 
   
-  
+
+
+    </div>
+
+    
+    
   <footer class="footer" role="contentinfo">
     <div class="container">
       
@@ -573,14 +743,19 @@
       
 
       
-        <span class="footer__watermark">Built with <a href="https://github.com/HugoGiraudel/SassDoc">SassDoc</a>.</span>
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
       
     </div>
   </footer>
 
 
+  </article>
+
+
   
-  <script src="assets/js/prism.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/main.min.js"></script>
 
 </body>
 </html>
