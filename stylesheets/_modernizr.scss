@@ -14,10 +14,11 @@
 * @param {Bool}      $supports   - Whether to check for supported features or not
 * @param {ArgList}   $features   - List of features
 *
-* @throws `$feature` is not a `string` for `modernizr`
+* @throws `Modernizr mixin should be called within a selector.`
+* @throws `$feature` is not a `string` for `modernizr.`
 */
 
-@mixin modernizr($supports, $features...) {
+@mixin _modernizr($supports, $features...) {
 
   // Use the 'no-' prefix if checking for unsuported features (e.g. `.no-translate3d`)
   $prefix: if($supports, '', 'no-');
@@ -38,7 +39,7 @@
     // Making sure $feature is a string
     @if type-of($feature) != string {
 
-      @error '`#{$feature} is not a string for `modernizr`';
+      @error '`#{$feature} is not a string for `modernizr`.';
 
     } @else {
 
@@ -86,7 +87,7 @@
 */
 
 @mixin yep($features...) {
-  @include modernizr(true, $features...) {
+  @include _modernizr(true, $features...) {
     @content;
   }
 }
@@ -114,7 +115,7 @@
 */
 
 @mixin nope($features...) {
-  @include modernizr(false, $features...) {
+  @include _modernizr(false, $features...) {
     @content;
   }
 }

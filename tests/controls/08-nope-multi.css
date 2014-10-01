@@ -7,7 +7,8 @@
 * @param {Bool}      $supports   - Whether to check for supported features or not
 * @param {ArgList}   $features   - List of features
 *
-* @throws `$feature` is not a `string` for `modernizr`
+* @throws `Modernizr mixin should be called within a selector.`
+* @throws `$feature` is not a `string` for `modernizr.`
 */
 /**
 * Prints classes for supported features

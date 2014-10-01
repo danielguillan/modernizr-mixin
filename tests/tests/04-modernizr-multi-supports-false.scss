@@ -3,7 +3,7 @@
 // Simple
 .modernizr-multi-supports-false {
     $features: (opacity, csstransforms);
-    @include modernizr(false, $features...) {
+    @include _modernizr(false, $features...) {
         test: ok;
     }
 }
@@ -12,7 +12,7 @@
 .modernizr-multi-supports-false {
     .modernizr-multi-supports-false2 {
         $features: (opacity, csstransforms);
-        @include modernizr(false, $features...) {
+        @include _modernizr(false, $features...) {
             test: ok;
         }
     }
@@ -22,7 +22,7 @@
 .modernizr-multi-supports-false,
 .modernizr-multi-supports-false2 {
     $features: (opacity, csstransforms);
-    @include modernizr(false, $features...) {
+    @include _modernizr(false, $features...) {
         test: ok;
     }
 }

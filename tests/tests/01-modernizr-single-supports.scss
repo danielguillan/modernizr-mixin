@@ -2,7 +2,7 @@
 
 // Simple
 .modernizr-single-supports {
-    @include modernizr(true, opacity) {
+    @include _modernizr(true, opacity) {
         test: ok;
     }
 }
@@ -10,7 +10,7 @@
 // Nested
 .modernizr-single-supports {
     .modernizr-single-supports2 {
-        @include modernizr(true, opacity) {
+        @include _modernizr(true, opacity) {
             test: ok;
         }
     }
@@ -19,7 +19,7 @@
 // Multiple
 .modernizr-single-supports,
 .modernizr-single-supports2 {
-    @include modernizr(true, opacity) {
+    @include _modernizr(true, opacity) {
         test: ok;
     }
 }
