@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
 * Prints classes for supported or unsupported features
 *
@@ -27,7 +26,7 @@
 * }
 */
 /**
-* Nope “alias”
+* Nope "alias"
 * Prints classes for unsupported features and lack of JS
 *
 * @requires modernizr
