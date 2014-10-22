@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.2
+* invalid US-ASCII character fix
+
+## 3.0.1
+* Namespace the private _modernizr mixin
+
 ## 3.0.0
 
 * Fixed error when mixin is called twice with the same parameters outside and inside a media query.
