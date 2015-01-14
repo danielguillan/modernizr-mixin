@@ -58,9 +58,9 @@
   $selector: selector-nest($selector, &);
 
   // Define feature selector(s) and print @content
-    @at-root #{$selector} {
-      @content;
-    }
+  @at-root #{$selector} {
+    @content;
+  }
 
 }
 
