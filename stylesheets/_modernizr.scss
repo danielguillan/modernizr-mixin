@@ -39,7 +39,7 @@
     // Making sure $feature is a string
     @if type-of($feature) != string {
 
-      @error '`#{$feature} is not a string for `modernizr`.';
+      @error '`#{$feature}` is not a string for `modernizr`.';
 
     } @else {
 
