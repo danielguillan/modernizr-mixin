@@ -37,9 +37,9 @@
   @each $feature in $features {
 
     // Making sure $feature is a string
-    @if type-of($feature) != string {
+    @if type-of($feature) != 'string' {
 
-      @error '`#{$feature} is not a string for `modernizr`.';
+      @error '`#{$feature}` is not a string for `modernizr`.';
 
     } @else {
 
@@ -49,7 +49,7 @@
       // Append the new selector
       // a) to the string if yep (e.g. `.translate3d.opacity`)
       // b) to the list if nope (e.g. `.no-translate3d, .no-opacity`)
-      $selector: if($supports, $selector + $new-selector, append($selector, $new-selector, comma));
+      $selector: if($supports, $selector + $new-selector, append($selector, $new-selector, 'comma'));
 
     }
   }
@@ -58,9 +58,9 @@
   $selector: selector-nest($selector, &);
 
   // Define feature selector(s) and print @content
-    @at-root #{$selector} {
-      @content;
-    }
+  @at-root #{$selector} {
+    @content;
+  }
 
 }
 
