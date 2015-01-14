@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.3
+* Code quality
+
 ## 3.0.2
 * invalid US-ASCII character fix
 
