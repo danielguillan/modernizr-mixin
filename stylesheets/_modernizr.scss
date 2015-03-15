@@ -5,18 +5,10 @@
 // -----------------------------------------------------------------------------
 // Modernizr
 // -----------------------------------------------------------------------------
-
-/**
-* Prints classes for supported or unsupported features
-*
-* @access private
-*
-* @param {Bool}      $supports   - Whether to check for supported features or not
-* @param {ArgList}   $features   - List of features
-*
-* @throws `Modernizr mixin should be called within a selector.`
-* @throws `$feature` is not a `string` for `modernizr.`
-*/
+/// Prints classes for supported or unsupported features
+/// @access private
+/// @param {Bool}      $supports   - Whether to check for supported features or not
+/// @param {ArgList}   $features   - List of features
 
 @mixin _modernizr($supports, $features...) {
 
@@ -68,23 +60,15 @@
 // -----------------------------------------------------------------------------
 // Yep mixin
 // -----------------------------------------------------------------------------
-
-/**
-* Prints classes for supported features
-*
-* @requires modernizr
-*
-* @access public
-*
-* @param {ArgList} $features   - List of features
-*
-* @example scss
-* .my-selector {
-*   @include yep(opacity, csstransforms) {
-*     // ...
-*   }
-* }
-*/
+/// Prints classes for supported features
+/// @access public
+/// @param {ArgList} $features - List of features
+/// @example scss
+/// .my-selector {
+///   @include yep(opacity, csstransforms) {
+///     // ...
+///   }
+/// }
 
 @mixin yep($features...) {
   @include _modernizr(true, $features...) {
@@ -92,27 +76,19 @@
   }
 }
 
+
 // -----------------------------------------------------------------------------
 // Nope mixin
 // -----------------------------------------------------------------------------
-
-/**
-* Nope "alias"
-* Prints classes for unsupported features and lack of JS
-*
-* @requires modernizr
-*
-* @access public
-*
-* @param {ArgList} $features - List of features
-*
-* @example scss
-* .my-selector {
-*   @include nope(opacity, csstransforms) {
-*     // ...
-*   }
-* }
-*/
+/// Prints classes for unsupported features and lack of JS
+/// @access public
+/// @param {ArgList} $features - List of features
+/// @example scss
+/// .my-selector {
+///   @include nope(opacity, csstransforms) {
+///     // ...
+///   }
+/// }
 
 @mixin nope($features...) {
   @include _modernizr(false, $features...) {
