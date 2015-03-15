@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.4
+* Updated SassDoc comments to the new syntax prevents docs from being compiled into the output css.
+
 ## 3.0.3
 * Code quality
 
