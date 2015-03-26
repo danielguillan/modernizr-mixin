@@ -1,8 +1,6 @@
-# Modernizr mixin
+# Modernizr mixin [![Build Status](https://travis-ci.org/danielguillan/modernizr-mixin.svg?branch=master)](https://travis-ci.org/danielguillan/modernizr-mixin)
 
 A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
-
-[![Build Status](https://travis-ci.org/danielguillan/modernizr-mixin.svg?branch=master)](https://travis-ci.org/danielguillan/modernizr-mixin)
 
 ## Install
 
