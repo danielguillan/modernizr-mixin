@@ -64,15 +64,14 @@ CSS output:
 
 ```css
 .translate3d.opacity .my-selector {
-	transform: translate3d(0, 100px, 0);
-	opacity: 0;
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
 }
-
-.no-js my-selector,
-.no-translate3d .selector,
-.no-opacity .selector {
-	top: 100px;
-	display: none;
+.no-js .my-selector,
+.no-translate3d .my-selector,
+.no-opacity .my-selector {
+  top: 100px;
+  display: none;
 }
 ```
 
