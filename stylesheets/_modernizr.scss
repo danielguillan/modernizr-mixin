@@ -46,12 +46,33 @@
     }
   }
 
-  // Generate selector nesting features classes and the parent selector
-  $selector: selector-nest($selector, &);
+  // Generate selector and print content
+  // @todo remove workaround once Libsass supports selector functions.
 
-  // Define feature selector(s) and print @content
-  @at-root #{$selector} {
-    @content;
+  // RubySass 3.4+
+  @if function-exists('selector-nest') {
+
+    // Generate selector by nesting features classes and the parent selector
+    $selector: selector-nest($selector, &);
+
+    @at-root #{$selector} {
+      @content;
+    }
+
+  } @else {
+
+    // Libsass 3.2 workaround using Modernizr Mixin v1.0' placeholder technique
+    // with a randomly generated placeholder name.
+    $placeholder: '%' + rand + random(100000000);
+
+    // Use placeholder technique generating a new placeholder each time.
+    #{$placeholder} & {
+      @content;
+    }
+
+    @at-root #{$selector} {
+      @extend #{$placeholder};
+    }
   }
 
 }
