@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.5
+* Support for LibSass 3.2
+
 ## 3.0.4
 * Updated SassDoc comments to the new syntax prevents docs from being compiled into the output css.
 
