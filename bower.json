@@ -1,6 +1,6 @@
 {
     "name": "modernizr-mixin",
-    "version": "3.0.5-beta.1",
+    "version": "3.0.5",
     "main": "modernizr.scss",
     "author": "Daniel Guillan",
     "ignore": ["*","!stylesheets/_modernizr.scss"]
