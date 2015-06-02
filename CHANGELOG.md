@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.6
+* Support for Eyeglass.
+
 ## 3.0.5
 * Support for LibSass 3.2
 

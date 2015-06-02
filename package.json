@@ -1,0 +1,41 @@
+{
+  "name": "modernizr-mixin",
+  "version": "3.0.6",
+  "description": "A simple way for DRYier, faster and cleaner Modernizr tests in Sass.",
+  "license": "MIT",
+  "main": "eyeglass-exports.js",
+  "eyeglass": {
+    "exports": "eyeglass-exports.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielguillan/modernizr-mixin"
+  },
+  "bugs": {
+    "url": "https://github.com/danielguillan/modernizr-mixin/issues"
+  },
+  "author": "Daniel Guillan",
+  "files": [
+    "stylesheets/_modernizr.scss",
+    "eyeglass-exports.js"
+  ],
+  "keywords": [
+    "modernizr",
+    "mixin",
+    "compass",
+    "eyeglass-module",
+    "sass",
+    "scss"
+  ],
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "dependencies": {
+    "eyeglass": "^0.2.0",
+    "node-sass": "^3.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "private": false
+}

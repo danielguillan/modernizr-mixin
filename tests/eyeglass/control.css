@@ -1,0 +1,9 @@
+.my-selector .translate3d.opacity .my-selector {
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
+}
+
+.my-selector .no-js .my-selector, .my-selector .no-translate3d .my-selector, .my-selector .no-opacity .my-selector {
+  top: 100px;
+  display: none;
+}
