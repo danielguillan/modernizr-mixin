@@ -12,12 +12,6 @@ There are 4 ways of installing the Modernizr mixin:
 
 Download [_modernizr.scss](/stylesheets/_modernizr.scss) and place it in your Sass directory.
 
-### Npm
-
-	npm install --save-dev modernizr-mixin
-
-Also, `modenirz-mixin` is ready to be used with [Eyeglass](https://github.com/sass-eyeglass/eyeglass) module.
-
 ### Bower
 
 Run the following command:
@@ -28,6 +22,10 @@ Run the following command:
 
 1. `gem install modernizr-mixin`
 2. Add `require 'modernizr-mixin'` to your `config.rb`
+
+### npm / Eyeglass module
+
+    npm install --save-dev modernizr-mixin
 
 ## Usage
 
