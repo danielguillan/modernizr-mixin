@@ -6,11 +6,17 @@ A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
 
 Requires Ruby Sass 3.4 or LibSass 3.2
 
-There are 3 ways of installing the Modernizr mixin:
+There are 4 ways of installing the Modernizr mixin:
 
 ### Download
 
 Download [_modernizr.scss](/stylesheets/_modernizr.scss) and place it in your Sass directory.
+
+### Npm
+
+	npm install --save-dev modernizr-mixin
+
+Also, `modenirz-mixin` is ready to be used with [Eyeglass](https://github.com/sass-eyeglass/eyeglass) module.
 
 ### Bower
 
@@ -28,6 +34,10 @@ Run the following command:
 Import it into your main stylesheet:
 
 	@import 'modernizr';
+
+Or if you are using `Eyeglass`:
+
+	@import 'modernizr-mixin/_modernizr';
 
 The Modernizr helper includes two mixins: `yep` and `nope`. Simply pass a comma-separeted list (`argList`) of features as argument and the rules you need to print.
 

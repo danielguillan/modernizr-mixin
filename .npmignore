@@ -1,0 +1,23 @@
+# This file pretty much copies `.gitignore`,
+# but has stricter rules, which are defined in the end.
+*.gem
+.sass-cache
+Gemfile.lock
+
+# npm files:
+node_modules/
+*.log
+
+# These files are `.npmignore` specific,
+# these rules remove unwanted files from `npm` package.
+lib/
+tests/
+Rakefile
+Gemfile
+bower.json
+*.yml
+*.json
+*.gemspec
+
+# package.json is required:
+!package.json

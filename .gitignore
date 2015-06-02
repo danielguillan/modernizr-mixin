@@ -1,3 +1,7 @@
 *.gem
 .sass-cache
 Gemfile.lock
+
+# npm files:
+node_modules/
+*.log

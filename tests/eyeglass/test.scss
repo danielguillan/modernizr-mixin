@@ -1,0 +1,12 @@
+@import "modernizr-mixin/_modernizr";
+
+.my-selector {
+    @include yep(translate3d, opacity) {
+        transform: translate3d(0, 100px, 0);
+        opacity: 0;
+    }
+    @include nope(translate3d, opacity) {
+        top: 100px;
+        display: none;
+    }
+}
