@@ -116,3 +116,23 @@
     @content;
   }
 }
+
+
+// -----------------------------------------------------------------------------
+// Libsass error check
+// -----------------------------------------------------------------------------
+/// There is a known bug in Libsass 3.2.3 / 3.2.4 that makes Modernizr mixin
+/// output incorrect selectors. This test throws an error for versions of Libsass
+/// that contain said bug.
+/// @todo Remove once the Libsass bug is patched
+
+%_modernizr-libsass-bug-test {
+  $a: '%foo#{&}';
+
+  @at-root #{$a} {
+    $b: #{&};
+    @if $b == '%_modernizr-libsass-bug-test %foo%_modernizr-libsass-bug-test' {
+      @error '[Modernizr mixin]: There is a known bug in Libsass 3.2.3 / 3.2.4 that makes Modernizr mixin output incorrect selectors. If you want to keep using the Modernizr Mixin you need to stick to Libsass 3.2.2 until the bug is patched, hopefully in 3.2.5. Learn more at https://github.com/danielguillan/modernizr-mixin/issues/24';
+    }
+  }
+}
