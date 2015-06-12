@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.7
+* Added warning for known bug in Libsass 3.2.3 / 3.2.4 that makes Modernizr mixin output incorrect selectors. Learn more at https://github.com/danielguillan/modernizr-mixin/issues/24
+
 ## 3.0.6
 * Support for Eyeglass.
 
