@@ -6,7 +6,7 @@ A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
 
 Requires Ruby Sass 3.4 or LibSass 3.2
 
-**LIBSASS WARNING: There is a known bug in Libsass 3.2.3 and 3.2.4 that makes Modernizr mixin output incorrect selectors. The only workaround until the bug is patched is to stick to Libsass 3.2.2. https://github.com/sass/libsass/issues/1210**
+**LIBSASS WARNING: There is a known bug in Libsass 3.2.3 through 3.2.5 that makes Modernizr mixin output incorrect selectors. The only workaround until the bug is patched in the next Libsass release is to stick to Libsass 3.2.2. More info: https://github.com/danielguillan/modernizr-mixin/issues/24**
 
 There are 4 ways of installing the Modernizr mixin:
 
