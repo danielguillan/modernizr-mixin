@@ -1,0 +1,10 @@
+@import "modernizr-mixin/_modernizr";
+
+.bar {
+  @include yep(js, svg) {
+    widht: 10px;
+  }
+  @include nope(svg) {
+    display: none;
+  }
+}

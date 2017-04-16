@@ -1,0 +1,6 @@
+.js.svg .bar {
+  widht: 10px;
+}
+.no-js .bar, .no-svg .bar {
+  display: none;
+}
