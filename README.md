@@ -1,3 +1,7 @@
+**NO LONGER MAINTAINED**
+
+----
+
 # Modernizr mixin [![Build Status](https://travis-ci.org/danielguillan/modernizr-mixin.svg?branch=master)](https://travis-ci.org/danielguillan/modernizr-mixin) [![Bower version](https://badge.fury.io/bo/modernizr-mixin.svg)](http://badge.fury.io/bo/modernizr-mixin) [![Gem Version](https://badge.fury.io/rb/modernizr-mixin.svg)](http://badge.fury.io/rb/modernizr-mixin)
 
 A simple way for DRYier, faster and cleaner Modernizr tests in Sass.
