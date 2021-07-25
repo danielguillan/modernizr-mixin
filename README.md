@@ -91,4 +91,4 @@ CSS output:
 
 ## Credits
 
-Thanks [Hugo Giraudel](https://github.com/hugogiraudel) for the code review and tweaks.
+Thanks [Kitty Giraudel](https://github.com/kittygiraudel) for the code review and tweaks.
